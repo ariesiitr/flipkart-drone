@@ -3,7 +3,7 @@ serverIP="192.46.215.236"
 logFile="/home/pi/dronelog/serverConnection.log"
 IPFound=0
 
-while True
+while true
 do
 	currentSelfIP=$(/usr/sbin/ifconfig | grep -A2 $networkInterface | grep "inet " | awk -F' ' '{print $2}')
 	date=$(date)

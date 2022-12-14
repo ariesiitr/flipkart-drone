@@ -3,7 +3,7 @@ serverIP="192.46.215.236"
 logFile="/home/pi/dronelog/ipTables.log"
 networkGateway=$(/sbin/ifconfig | grep -A2 $networkInterface | grep "inet " | awk -F' ' '{print $2}' | awk -F'.' '{print $1"."$2"."$3".1"}')
 
-while True
+while true
 do
     if [! -z $networkGateway]
     then
